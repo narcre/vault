@@ -1,4 +1,11 @@
 ```
+vault login -method=userpass username=reza password=qazwsx
+vault kv get kv/reza
+vault kv get kv/another-user  # This should result in a permission denied error.
+```
+
+
+```
 vault token lookup <user_token>
 path "sys/mounts/*" {
   capabilities = ["create", "read", "update", "delete", "list"]
